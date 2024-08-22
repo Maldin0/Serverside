@@ -61,3 +61,11 @@ class ProjectDetailView(View):
             "message" : f"Removed staff {employee.get_full_name}"
         }
         return JsonResponse(res, status=200)
+    
+class IndexView(View):
+    def get(self, request):
+        return redirect("employees")
+    
+class LayoutView(View):
+    def get(self, request):
+        return render(request, 'layout.html')
