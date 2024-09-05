@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block page_title%} Create Employee {% endblock %}
+
+{% block head%}
+<main>
+<h1>Form Employee</h1>
+{% endblock %}
+
+{% load i18n %}
+{% block content %}
+<div class="emp-form-box">
+  <form method="post">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Save</button>
+  </form>
+</div>
+</main>
+{% endblock %}

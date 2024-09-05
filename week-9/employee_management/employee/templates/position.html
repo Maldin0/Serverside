@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block page_title %}Position{% endblock %}
+{% block head %}
+<main>
+    <div class="head">
+        <h1>Position</h1>
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="itemGroup">
+        {% for position in positions_list %}
+        <div class="item">
+            <!-- position id และ ชื่อตำแหน่ง -->
+            <div>{{position.id}}. {{position.name}}</div>
+
+            <!-- จำนวนพนักงานทั้งหมด -->
+            <div class="action">{{position.count}} People</div>
+        </div>
+        {% empty %}
+        <p>something blew up</p>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
