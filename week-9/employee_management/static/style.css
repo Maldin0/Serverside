@@ -19,12 +19,15 @@ nav a {
 
 main {
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .head {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
 }
 
 .head .action {
@@ -37,6 +40,7 @@ main {
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+  width: 100%;
 }
 
 .item {
@@ -90,11 +94,10 @@ textarea {
   border: 1px solid #ddd;
 }
 
-.form {
+form {
   display: flex;
-  gap: 10px;
   flex-direction: column;
-  padding: 10px;
+  align-items: self-end;
 }
 
 .form input {
@@ -106,22 +109,27 @@ textarea {
   width: 250px;
 }
 
-.form, button {
-  margin-top: 10px;
+form > button {
+  width: 100%;
+  align-self: center;
+  margin: 10px;
 }
 
 .form, textarea{
   margin-top: 20px;
 }
-
 .from, label{
   font-size: 25px;
   font-weight: 500;
 }
 
 .emp-form-box{
-  margin-left: 80px;
-  margin-top: 10px;
+  display: flex;
+  /* margin-left: 80px;
+  margin-top: 10px; */
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 table {

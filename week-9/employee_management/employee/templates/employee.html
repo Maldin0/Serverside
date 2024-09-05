@@ -12,14 +12,15 @@
                 <h1>something blew up</h1>
             {% endif %}
         </div>
-</div>
+    </div>
 {% endblock %}
 {% block content %}
-<div>
+<div style="display: flex; margin:10px">
     <br>
     <!-- กำหนด path ไปยังหน้า form เพิ่มพนักงาน -->
     <a href="{% url 'add_employees' %}"><button class="newemp">New Employee</button></a>
-  </div>
+
+</div>
 <table>
     <thead>
         <tr>
