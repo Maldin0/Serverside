@@ -21,12 +21,14 @@ class Patient(models.Model):
         return self.name
 
 
+...
 class Appointment(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
     date = models.DateField()
     at_time = models.TimeField()
     details = models.TextField(null=True, blank=True)
+    created_by = models.ForeignKey('auth.User', null=True, on_delete=models.PROTECT)
 
     def __str__(self):
         return f'Appointment with Dr. {self.doctor.name} for {self.patient.name} on {self.date.strftime("YYYY-MM-DD HH:mm")}'
